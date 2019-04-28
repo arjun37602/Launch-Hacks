@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title> About Us </title>
+    </head>
+        <style>html {
+                box-sizing: border-box;
+              }
+              
+              *, *:before, *:after {
+                box-sizing: inherit;
+              }
+              
+              .column {
+                float: left;
+                width: 33.3%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+              }
+              
+              @media screen and (max-width: 650px) {
+                .column {
+                  width: 100%;
+                  display: block;
+                }
+              }
+              
+              .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              }
+              
+              .container {
+                padding: 0 16px;
+              }
+              
+              .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+              }
+              
+              .title {
+                color: blue;
+              }
+        
+        </style>
+    <body>
+        
+<p>Resize the browser window to see the effect.</p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="taha.jpg" alt="Taha" style="width:100%">
+      <div class="container">
+        <h2>Taha Qamar</h2>
+        <p class="title">Website Developer</p>
+        <p>tahqam838@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+        <div class="card">
+          <img src="arjun.jpg" alt="Arjun" style="width:100%">
+          <div class="container">
+            <h2>Arjun Balaji</h2>
+            <p class="title">Website Developer</p>
+            <p>arjun37602@gmail.com</p>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+<div class="column">
+  <div class="card">
+    <img src="ahmad.jpg" alt="Ahmad" style="width:100%">
+    <div class="container">
+      <h2>John Doe</h2>
+      <p class="title">Developer</p>
+      <p>ll.</p>
+      <p>ahmadzayan86@gmail.com</p>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+
+    </body>
+    </html>

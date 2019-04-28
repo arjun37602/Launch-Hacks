@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+section{
+  position: relative;
+  height: 600px; ;
+  width: 100% ;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+header {
+  background: rgba(84, 133, 240, 0.774)
+}
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+/*to move the containers down*/
+div{margin-top:100px;}
+
+/*for the nav bar logo*/
+.logo {
+  float: left;
+  padding: 20px 0px;
+ 
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 20px;
+ position: relative;
+ left: -30px;
+}
+
+nav a {
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0px;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+h1{
+top:-15px;
+position: absolute;
+left: 20px;
+color: rgb(58, 58, 58);
+font-size: 32px;
+}
+/*for the focus*/
+p{
+  color: white;
+font-size: 32px;
+margin-top: -300px;
+position: relative;
+left: 450px;
+}
+.distracted{
+  left: 25px;
+  top: 150px;
+  position: relative;
+}
+.container{
+  height: 50px;
+  width: 100%;
+}
+/*for what is focus*/
+h2{
+  position: relative;
+  top: 10px;
+  font-size:60px;
+  text-align: center;
+  left: 2.5%;
+}
+/*for meet the team*/
+h3{
+  position: absolute;
+  top:-100px;
+  font-size:50px;
+  text-align: center;
+  left: 35%;
+  color: white;
+}
+video{
+  margin: 1px auto;
+}
+p{
+ top:200px;
+}
+img{
+border: 1px solid rgba(84, 133, 240, 0.774);
+background-color: rgba(84, 133, 240, 0.774);
+border-radius: 3px;
+padding: 20px;
+width: 400px;
+margin-top: -200px;
+}
+@bg: #2d2d37; // Dark blue
+@primary: #fd6b21; // Orange
+
+body { background: @bg;}
+a { color: white; text-decoration: none; }
+
+.arrow {
+  text-align: absolute;
+  margin-top: -100px;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+.arrow-down{
+  width: 100%;
+  margin-top:200px;
+  text-align: center;
+  position: relative;
+}
+.arrow-down::after{
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: -85;
+  left: 0;
+  right: 0;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation: 3s arrow infinite ease;
+  animation: 3s arrow infinite ease;
+}
+
+@-webkit-keyframes arrow{
+  0%, 100%{
+    top: 50px;
+  }
+  50%{
+    top: 80px;
+  }
+}
+
+@keyframes arrow{
+  0%, 100%{
+    top: 50px;
+  }
+  50%{
+    top: 80px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.ahmad{
+  position: absolute;
+  top: 110px;
+  left: 900px;
+}
+.title{
+  position: relative;
+  top: 320px;
+  left: 70px;
+  color: white;
+}
+.title2{
+    position: relative;
+    top: 275px;
+    left: 950px;
+}
+.title1{
+  position: relative;
+  top: 320px;
+  left: 40px;
+}
+.title3{
+  position: absolute;
+  top: 650;
+  left: 975px;
+  }
+.title4{
+position: absolute;
+top: 650px;
+color: white;
+}
+.title5{
+  position: absolute;
+  top: 650px;
+  color: white;
+  left: 60px;
+}

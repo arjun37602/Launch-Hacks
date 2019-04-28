@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App</title>
+
+    <link rel="stylesheet" href="app.css">
+    
+</head>
+<body>    <header>
+    <div class="container">
+    <h1> Focus</h1>
+
+        <nav>
+        <ul>
+            <li><a href="Focus.html">Home</a></li>
+            <li><a href="App.html">Focus</a></li>
+            <li><a href="prototype.html">Prototype</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
+   
+    </header>
+    
+    <div class="container">
+
+        <div id="display">
+            <h2> Study Session </h2>
+            00:00:00
+        </div>
+
+        <div class="buttons">
+            <button id="startStop" onclick="startStop()">Begin Study Session</button> <button id="reset" onclick="reset()">New Session</button>
+        </div>
+
+
+    <script>
+        let seconds = 0;
+        let minutes = 0;
+let hours = 0;
+
+let displaySeconds = 0;
+let displayMinutes = 0;
+let displayHours = 0;
+
+let interval = null;
+
+let status = "stopped";
+
+function stopWatch(){
+
+    seconds++;
+
+    if(seconds / 60 === 1){
+        seconds = 0;
+        minutes++;
+
+        if(minutes / 60 === 1){
+            minutes = 0;
+            hours++;
+        }
+
+    }
+
+    if(seconds < 10){
+        displaySeconds = "0" + seconds.toString();
+    }
+    else{
+        displaySeconds = seconds;
+    }
+
+    if(minutes < 10){
+        displayMinutes = "0" + minutes.toString();
+    }
+    else{
+        displayMinutes = minutes;
+    }
+
+    if(hours < 10){
+        displayHours = "0" + hours.toString();
+    }
+    else{
+        displayHours = hours;
+    }
+
+    document.getElementById("display").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
+
+}
+
+
+
+function startStop(){
+
+    if(status === "stopped"){
+
+        interval = window.setInterval(stopWatch, 1000);
+        document.getElementById("startStop").innerHTML = "Stop Session";
+        status = "started";
+
+    }
+    else{
+
+        window.clearInterval(interval);
+        document.getElementById("startStop").innerHTML = "Resume Study Session";
+        status = "stopped";
+
+    }
+}
+
+function reset(){
+
+    window.clearInterval(interval);
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    document.getElementById("display").innerHTML = "00:00:00";
+    document.getElementById("startStop").innerHTML = "Start";
+
+}
+    
+</script>
+<br>
+<br>
+<hr>
+<p> This is a stopwatch we created to help you stay focused. 
+    Just start the timer and stay focused for as long as you
+    want. We are also currently working on an app called FOCUS which will be coming out soon. 
+    Our app will be a lot more featuristic interactive so be on a lookout for that. </p>
+</body>
+    
+</html> 
